@@ -12,6 +12,10 @@ body {
     background: linear-gradient(45deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
 }
 
+.h1-text-format{
+    color: #ffffff;
+    font-weight: bolder;
+}
 .h2-text-format{
     color: #ffffff;
     font-weight: bold;
@@ -21,6 +25,7 @@ body {
     text-shadow: 0 4 4 0 #00000025;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 .h4-text-format{
     color: #ffffff;
@@ -73,12 +78,7 @@ body {
     width: 100%;
     height: 92px;
     border-bottom: 2px solid #412567;
-    
-    
-}
-.navbar h1{
-    color: #ffffff;
-    font-weight: bolder;
+        
 }
 
 
@@ -96,6 +96,7 @@ span{
     gap: 20%;
 }
 
+
 .nav-items a{
     text-decoration: none;
     color: #ffffff;
@@ -106,7 +107,14 @@ span{
     padding: auto;
     margin: auto;
     cursor: pointer;
+    
 }  
+.nav-items a:hover{
+    background: linear-gradient(0deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    border-radius: 40px;
+    padding: 10px 15px;
+    transition: ease-in .2s
+}
 
 .subscribe-button{
     border: none;
@@ -131,8 +139,52 @@ span{
 }
 /* banner section */
 /* about section */
-/* why choose section */
+/******************************** why choose section ****************************************/
 
+.Why-Choose-TechWave{
+    width: 100%;
+    height: auto;
+    background-color: #230E3D;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 140px;
+    padding-bottom: 200px;
+}
+.Why-Choose-TechWave h2{
+    padding-bottom: 40px;
+}
+
+.why-choose-card{
+    background-color: #351165;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.grid-child-audio{
+    grid-area: grid-child-audio ;
+}
+.grid-child-mobile{
+    grid-area: grid-child-mobile ;
+}
+.grid-child-global{
+    grid-area: grid-child-global ;
+}
+.grid-child-exclusive{
+    grid-area: grid-child-exclusive ;
+}
+.grid-child-rich{
+    grid-area: grid-child-rich ;
+}
+.why-choose-cards{
+    display: grid;
+    gap: 30px;
+    grid-template-areas: "grid-child-audio grid-child-mobile grid-child-mobile grid-child-mobile"
+                        "grid-child-audio grid-child-global grid-child-global grid-child-global" 
+                        "grid-child-exclusive grid-child-exclusive grid-child-exclusive grid-child-rich" ;
+
+}
 
 /****************************** featured episodes section **********************************/
 
@@ -145,10 +197,9 @@ span{
     height: auto;
 }
 .featured-heading, .meet-heading{
-    text-align: center;
+    
     width: 100%;
     height: auto;
-    margin: 0;
     padding: 60px;
 }
 .featured-cards{
@@ -189,7 +240,7 @@ span{
     border: .5px solid red;
     border-radius: 50%;
 }
-/* footer section */
+/*************footer section *****************/
 footer{
     background-image: url(images/footer-bg.png);
     background-position: center;
@@ -289,4 +340,16 @@ footer h1{
     padding: 0;
 }
 
+/***************why choose section********************/
+.Why-Choose-TechWave{  
+    padding-top: 40px;
+    padding-bottom: 80px;}
+.why-choose-cards{
+    grid-template-areas: "grid-child-audio"
+                        "grid-child-mobile"
+                        "grid-child-global" 
+                        "grid-child-exclusive"
+                        "grid-child-rich";
+
+}
 }
