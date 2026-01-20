@@ -76,7 +76,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 92px;
+    height: auto;
     border-bottom: 2px solid #412567;
         
 }
@@ -107,13 +107,12 @@ span{
     padding: auto;
     margin: auto;
     cursor: pointer;
-    
 }  
 .nav-items a:hover{
     background: linear-gradient(0deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
     border-radius: 40px;
     padding: 10px 15px;
-    transition: ease-in .2s
+    transition: ease-in .2s;
 }
 
 .subscribe-button{
@@ -129,8 +128,13 @@ span{
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    gap: 4%;  
+    gap: 4%;
+    transition: ease-in .2s;
 }
+.subscribe-button:hover{
+    transform: scale(1.1);
+}
+
 .subscribe-button img{
     background-color: none;
 }
@@ -153,16 +157,45 @@ span{
     align-items: center;
 }
 
+.banner-circle{  
+    width: 22%; 
+    height: auto;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.banner-circle-back {
+    width: 100%;
+    height: auto;
+    position: relative;
+    object-fit: cover;
+}
+
+.banner-circle-front {
+    width: 25%;      
+    height: auto;
+    position: absolute;
+    object-fit: cover;
+    top: 30%;
+    left: 38%;
+}
 .badge{
     color: #1A0B2E;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     background-color: #00FF88;
     border-color: none;
-    border-radius: 20px;
+    border-radius: 25px;
+    width: 60px;
+    height: auto;
     margin: 0;
-    padding: 0;
-    
+    padding: 6px;
+    text-align: center;
+    position: absolute;
+    object-fit: cover;
+    top: 10%;
+    left: 80%;
+       
 }
 
 .banner-heading{
@@ -179,7 +212,8 @@ span{
 .banner-buttons{
     display: flex;
     justify-content: center;
-    gap: 10px
+    gap: 10px;
+    padding-top: 30px;
 }
 .banner-button-spotify{
     border:none;
@@ -214,6 +248,15 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+.banner-button-subscribe:hover{
+    background: linear-gradient(0deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+    border: none;
+    border-radius: 40px;
+    padding: 10px 15px;
+    
+    
 }
 /**************************** about section ****************************/
 .about{
@@ -293,7 +336,7 @@ span{
 
 }
 
-/****************************** featured episodes section **********************************/
+/****************************** featured episodes+ meet the hostsection **********************************/
 
 .featured-meet{
     background-color: #1A0B2E;
@@ -324,6 +367,10 @@ span{
     padding: 0;
     background-color: #351165;
     border-radius: 30px;
+    transition: 0.3s ease-in;
+}
+.featured-card:hover{
+    transform: scale(1.03);
 }
 .featured-card iframe{
     border-radius: 30px 30px 0 0;
@@ -362,13 +409,30 @@ span{
     gap: 2%;
     padding-top: 10px;
 }
-.meet-links a{
-    background-color: transparent;
-    height: 50px;
-    width: 50px;
-    border: .5px solid red;
+
+.meet-link-button{
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid #533C72;
+    border-radius: 50%;
+    transition: 0.2s ease-in;
 }
+.meet-link-button:hover{
+    transform: scale(1.2);
+}
+.meet-link-button img{
+    width: 18px;
+    height: 18px;
+    object-fit: contain;   
+}
+
+
 /*************footer section *****************/
 footer{
     background-image: url(images/footer-bg.png);
@@ -389,21 +453,21 @@ footer h1{
     text-align: center;
     margin: 0;
     color: #ffffff;
-    font-weight: bolder
- 
+    font-weight: bolder;
+    padding-bottom: 20px;
 }
 .footer-links{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20%;
-    width: 30%;
+    gap: 50px;
+    padding-bottom: 15px;
 }
 .footer-links a{
     display: flex;
     justify-content:center ;
     align-items: center;
-    gap: 10%;
+    gap: 8px;
     text-decoration: none;
     color: #FAFAFA;
     -webkit-text-stroke-color: black;
@@ -420,14 +484,17 @@ footer p{
 
 
 
-/**************************responsive media query***************************/
+/********************************************************************responsive media query***********************************************************/
+
+
 @media screen and (max-width:576px){
+
+
 /*********** navbar **********/
-    .navbar{
+
+.navbar{
     padding-left: 5%;
     padding-right: 5%;
-    width: 100%;
-    height: 60px;
 }
 .nav-items,
 .subscribe-button{
@@ -437,26 +504,77 @@ footer p{
     display: block;
 }
 
-/********** footer **************/
-footer{
-    height: 248px;
+/*********** banner **********/
+
+.banner{
+    text-align: center;
+    padding: 10%;
 }
-footer h1{
-    font-size: 3rem;
+
+.banner-circle{  
+    width: 55%; 
 }
-.footer-links{
+
+.banner-circle-front {
+    top: 26%;
+    left: 38%;
+}
+.badge{
+    width: 60px;
+    top: 10%;
+    left: 78%;      
+}
+
+/*********** about **********/
+
+.about{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.about-text h2{
+    padding-bottom:30px ;
+}
+.about-text p{
+    padding-bottom:15px ;
+}
+
+.about-stats{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 14px;
     
 }
+
+
+/***************why choose section********************/
+.Why-Choose-TechWave{  
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 40px;
+    padding-bottom: 80px;}
+
+.why-choose-cards{
+    grid-template-areas: "grid-child-audio"
+                         "grid-child-mobile"
+                         "grid-child-global" 
+                         "grid-child-exclusive"
+                         "grid-child-rich";
+
+}
+
 /******* featured episodes section **********/
 .featured-meet{
-    padding-left: 2%;
-    padding-right: 2%;
-  
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .featured-cards, .meet-describtion{
     flex-direction: column;
-    padding: 0;
+    gap: 15px;
 }
 .meet-links, .featured-cards{
     justify-content: center;
@@ -469,19 +587,25 @@ footer h1{
     padding: 0;
 }
 
-/***************why choose section********************/
-.Why-Choose-TechWave{  
-    padding-top: 40px;
-    padding-bottom: 80px;}
-.why-choose-cards{
-    grid-template-areas: "grid-child-audio"
-                        "grid-child-mobile"
-                        "grid-child-global" 
-                        "grid-child-exclusive"
-                        "grid-child-rich";
+.meet-describtion-text{
+    text-align: center;
+}
 
+/********** footer **************/
+footer{
+    height:auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
-.about-stats{
-    flex-direction: column;
+
+footer h1{
+    font-size: 2.5rem;
 }
+.footer-links{
+    flex-wrap: wrap;
+    gap: 36px;
+}
+
+
+
 }
