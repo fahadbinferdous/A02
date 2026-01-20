@@ -147,7 +147,7 @@ span{
     height: auto;
     padding-bottom: 60px;
     padding-top: 50px;
-    background-image: url(images/hero-bg.png);
+    background-image: url(images/hero-bg-compressed.png);
     background-position: center;
     background-size: cover;
     background-repeat:no-repeat ;
@@ -368,6 +368,7 @@ span{
     background-color: #351165;
     border-radius: 30px;
     transition: 0.3s ease-in;
+    
 }
 .featured-card:hover{
     transform: scale(1.03);
@@ -402,6 +403,9 @@ span{
     padding: 5%;
     gap: 2%;
 }
+.meet-describtion-text h4{
+    padding-bottom: 10px;
+}
 .meet-links{
     display: flex;
     justify-content: flex-start;
@@ -435,7 +439,7 @@ span{
 
 /*************footer section *****************/
 footer{
-    background-image: url(images/footer-bg.png);
+    background-image: url(images/footer-bg-compressed.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
